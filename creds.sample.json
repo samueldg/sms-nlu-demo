@@ -1,0 +1,11 @@
+{
+    "app_id": "{{NMDPTRIAL_my_awesome_app_id}}",
+    "app_key": "{{YOUR_128_char_key}}",
+    "context_tag": "{{your_context_tag}}",
+    "language": "eng-USA",
+    "url": "https://ws.dev.nuance.com",
+
+    "twilio_account_sid": "{{your_twilio_account_sid}}",
+    "twilio_auth_token": "{{your_twilio_auth_token}}",
+    "twilio_from_number": "{{your_twilio_from_number}}"
+}
