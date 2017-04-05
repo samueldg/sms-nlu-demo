@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project xmlns:nuance="https://developer.nuance.com/mix/nlu/trsx" xml:lang="eng-USA" nuance:version="2.3">
+    <metadata>
+        <entry key="created_by">Samuel Dion-Girardeau</entry>
+        <entry key="created_by">samuel.diongirardeau@gmail.com</entry>
+        <entry key="domains">Communication</entry>
+        <entry key="domains">Social</entry>
+    </metadata>
+    <sources>
+        <source name="sms_demo" displayName="SMS demo" version="1.0" type="CUSTOM"/>
+    </sources>
+    <ontology base="http://localhost:8080/resources/ontology-1.0.xml">
+        <intents>
+            <intent name="SEND_SMS">
+                <links>
+                    <link conceptref="MESSAGE"/>
+                    <link conceptref="CONTACT"/>
+                </links>
+            </intent>
+        </intents>
+        <concepts>
+            <concept name="MESSAGE" freetext="true"/>
+            <concept name="CONTACT" dynamic="true"/>
+        </concepts>
+    </ontology>
+    <dictionaries/>
+    <samples>
+        <sample intentref="SEND_SMS" count="1">say<annotation conceptref="MESSAGE">hi</annotation>to<annotation conceptref="CONTACT">Jim</annotation>
+        </sample>
+        <sample intentref="SEND_SMS" count="1">send a message to my<annotation conceptref="CONTACT">mom</annotation>saying<annotation conceptref="MESSAGE">come pick me up at the police station</annotation>
+        </sample>
+        <sample intentref="SEND_SMS" count="1">send a text to my<annotation conceptref="CONTACT">girlfriend</annotation>saying<annotation conceptref="MESSAGE">I love you</annotation>
+        </sample>
+        <sample intentref="SEND_SMS" count="1">send an SMS to<annotation conceptref="CONTACT">Mat</annotation>that reads:<annotation conceptref="MESSAGE">what's up tonight?</annotation>
+        </sample>
+        <sample intentref="SEND_SMS" count="1">send a text to<annotation conceptref="CONTACT">Dave</annotation>that says<annotation conceptref="MESSAGE">I'm in San Francisco</annotation>
+        </sample>
+        <sample intentref="SEND_SMS" count="1">write a text to<annotation conceptref="CONTACT">Mary</annotation>saying<annotation conceptref="MESSAGE">how are you doing</annotation>
+        </sample>
+        <sample intentref="SEND_SMS" count="1">send a message saying<annotation conceptref="MESSAGE">are you coming to the show with us tonight</annotation>to my<annotation conceptref="CONTACT">girlfriend</annotation>
+        </sample>
+        <sample intentref="SEND_SMS" count="1">send<annotation conceptref="MESSAGE">hey don't forget about that important thing at 6 tomorrow</annotation>to<annotation conceptref="CONTACT">myself</annotation>
+        </sample>
+    </samples>
+</project>
