@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "SMS + NLU demo configuration",
+  "description": "JSON schema for the configuration file of the SMS + NLU demo app",
+  "properties": {
+    "app_id": {
+      "type": "string",
+      "description": "Application ID",
+      "name": "app_id"
+    },
+    "app_key": {
+      "type": "string",
+      "description": "App key, in plain string version",
+      "name": "app_key",
+      "pattern": "^[0-9a-f]{128}$"
+    },
+    "url": {
+      "type": "string",
+      "description": "Address of the websocket runtime service",
+      "name": "url"
+    },
+    "context_tag": {
+      "type": "string",
+      "description": "Tag pointing to the appropriate NLU model version",
+      "name": "context_tag"
+    },
+    "language": {
+      "type": "string",
+      "description": "Language corresponding to the project, expected format is language on 3 letters lowercase dash country on 3 letters uppercase, example : eng-USA, eng-GBR, fra-FRA, fra-CAN...",
+      "name": "language",
+      "pattern": "^[a-z]{3}-[A-Z]{3}$"
+    },
+    "twilio_account_sid": {
+      "type": "string",
+      "description": "Twilio account SID",
+      "name": "twilio_account_sid"
+
+    },
+    "twilio_auth_token": {
+      "type": "string",
+      "description": "Twilio account authorization token",
+      "name": "twilio_auth_token"
+
+    },
+    "twilio_from_number": {
+      "type": "string",
+      "description": "SMS-capable phone number registered for the Twilio account",
+      "name": "twilio_from_number"
+
+    }
+  },
+  "required": [
+    "app_id",
+    "app_key",
+    "url",
+    "context_tag",
+    "language",
+    "twilio_account_sid",
+    "twilio_auth_token",
+    "twilio_from_number"
+  ]
+}

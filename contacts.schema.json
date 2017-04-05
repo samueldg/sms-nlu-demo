@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "title": "Contact list",
+  "description": "JSON schema for the user-specific contact list",
+  "items": {
+    "name": "contact",
+    "description": "Contact entry",
+    "properties": {
+      "literal": {
+        "type": "string",
+        "description": "Contact name or nickname",
+        "name": "literal"
+      },
+      "value": {
+        "type": "string",
+        "description": "Contact phone number",
+        "name": "value",
+      }
+    },
+    "required": [
+      "literal",
+      "value"
+    ]
+  }
+}
